@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[a4paper, portrait, margin=1.1811in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{multicol}
+\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{titlesec} % reformating title section
+\usepackage[english]{babel}
+\renewcommand\Authfont{\fontsize{10}{10.8}\selectfont}
+\renewcommand\Affilfont{\fontsize{10}{10.8}\selectfont}
+\renewcommand*{\Authsep}{, }
+\renewcommand*{\Authand}{, }
+\renewcommand*{\Authands}{, }
+\setlength{\affilsep}{2em}  
+% set font to Times New Roman
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+
+\title{\vspace{-1.5em}Template Jurnal Teknik Informasi}
+\author[1]{\textbf{Fisrt author}}
+\author[2]{\textbf{Second author}}
+\author[3]{\textbf{Third author}}
+\author[4*]{\textbf{Fourth author}}
+\affil[1,2]{ Afiliasi Penulis Satu (Departemen dan Institusi dalam bahasa Indonesia, kecuali institusi luar negeri)}
+\affil[3]{ Informatika, Fakultas Teknik, Universitas Jenderal Soedirman, Indonesia}
+\affil[4]{ Computer Information Systems, King Abdul Aziz University, Saudi Arabia}
+\affil[ ]{ Email: \textsuperscript{1}email@email.com, \textsuperscript{2}penulis2@email.com, \textsuperscript{3}tiga@email.com, \textsuperscript{4}empat@email.com}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{12pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{12pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\titleformat{\section}{\normalfont\fontsize{10}{15}\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{10}{15}\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{10}{15}\bfseries}{\thesubsubsection.}{1em}{}
+\titleformat{\author}{\normalfont\fontsize{10}{15}\bfseries}{\thesection}{1em}{}
+
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+    \small \textbf{Jurnal Teknik Informatika (JUTIF)}
+	\small \textit{Vol. x, No. y, Juni 2021, hlm. x-y}
+}
+\fancypagestyle{firstpage}{%
+  \lhead{
+    \small \textbf{Jurnal Teknik Informatika (JUTIF)}\\
+	\textit{Vol. x, No. y, Juni 2021, hlm. x-y}\\
+  }
+  \rhead{
+    DOI: x \\ p-ISSN: x \\ e-ISSN:x
+  }
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+\noindent
+	\begin{abstract}
+		\textbf{Abstract} consists of objectives, methods, findings, and research contributions in 150 to 250 words which contains the main conclusions and provides important information and is accompanied by \textbf{5 keywords}. Furthermore, the determination of keywords needs to pay attention to important words contained in the title and abstract, separated by a semicolon. \textbf{The novelty} in this paper briefly explains why no one else has adequately researched the question. Then \textbf{the results} are made a list of the empirical findings and write the discussion in one or two sentences. \\ \\
+		\textbf{\textit{Keywords}}: \textit{Keyword 1; keyword 2; keyword 3; keyword 4; keyword 5}
+	\end{abstract}
+    \makeatletter \large{\@title} \makeatother
+    \renewcommand{\abstractname}{Abstrak}
+	\begin{abstract}
+		\textbf{Abstrak} \blindtext \\ \\
+		\textbf{\textit{Keywords}}: \textit{Keyword 1; keyword 2; keyword 3; keyword 4; keyword 5}
+	\end{abstract}
+\noindent\rule{15cm}{0.4pt}
+\begin{multicols}{2}
+\section{Introduction}
+\blindtext
+\cite{Septiawan1}
+
+\section{Metode Penilitian}
+\blindtext
+
+\section{Hasil dan Pembahasan}
+\blindtext
+
+\subsection{Pembahasan 1}
+\blindtext
+
+\subsection{Pembahasan 2}
+\blindtext
+
+\section{Kesimpulan}
+\blindtext
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{1.7} 
+	\bibitem[1]{Septiawan1} R. R. Septiawan, “An ODE control system of a rigid body on an ocean wave for a surfer simulation in the SPH method,” \textit{The Science Reports of Kanazawa University}, vol. 62, pp. 51–68, 2018. [Online].
+\end{thebibliography}
+\end{multicols}
+\end{document}
